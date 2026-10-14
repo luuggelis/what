@@ -13,5 +13,5 @@ source=('what.py')
 sha256sums=('SKIP')
 
 package() {
-    install -Dm755 "$srcdir/what" "$pkgdir/usr/bin/what"
+	install -Dm755 "$srcdir/what.py" "$pkgdir/usr/bin/what"
 }
