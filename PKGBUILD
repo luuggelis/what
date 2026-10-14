@@ -7,9 +7,9 @@ pkgdesc="A small Bash system information and smiley face script"
 arch=('any')
 url="https://github.com/luuggelis/what"
 license=('MIT')
-depends=('bash' 'coreutils' 'gawk' 'sed')
+depends=('python')
 
-source=('what')
+source=('what.py')
 sha256sums=('SKIP')
 
 package() {
