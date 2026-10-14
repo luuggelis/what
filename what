@@ -1,0 +1,28 @@
+#!/bin/bash
+
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+VIOLET='\033[0;35m'
+NULL='\033[0m'
+
+disk_usage=$(df / | awk 'NR==2 {print $5}' | sed 's/%//')
+shell=$SHELL
+
+echo "
+    |          |
+    |          |
+              
+\                  /
+ \                /
+  \______________/
+"
+
+. /etc/os-release
+
+echo -e "${BLUE}name: ${NULL}$NAME"
+echo -e "${RED}id: ${NULL}$ID"
+echo -e "${GREEN}website: ${NULL}$HOME_URL"
+echo -e "${YELLOW}disk usage: ${NULL}${disk_usage}%"
+echo -e "${VIOLET}shell: ${NULL}${shell}"
